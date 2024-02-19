@@ -50,6 +50,7 @@ public class PlayerService implements PlayerRepository {
 
     public Player getPlayerById(int playerId) {
         Player player = team.get(playerId);
+        if(player==null) throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         return player;
     }
 
