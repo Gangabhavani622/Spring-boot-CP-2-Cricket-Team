@@ -55,7 +55,7 @@ public class PlayerService implements PlayerRepository {
     }
 
     public Player addPlayer(Player player) {
-        player.setId(uniqueId);
+        player.setPlayerId(uniqueId);
         team.put(uniqueId, player);
         uniqueId++;
         return player;
@@ -65,8 +65,8 @@ public class PlayerService implements PlayerRepository {
         Player existingPlayer = team.get(playerId);
         if (existingPlayer == null)
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
-        if (player.getName() != null)
-            existingPlayer.setName(player.getName());
+        if (player.getPlayerName() != null)
+            existingPlayer.setPlayerName(player.getPlayerName());
         if (player.getJerseyNumber() != 0)
             existingPlayer.setJerseyNumber(player.getJerseyNumber());
         if (player.getRole() != null)
