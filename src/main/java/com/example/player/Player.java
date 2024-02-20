@@ -14,11 +14,11 @@ public class Player {
         this.role = role;
     }
 
-    public void setId(int playerId) {
+    public void setPlayerId(int playerId) {
         this.playerId = playerId;
     }
 
-    public void setName(String playerName) {
+    public void setPlayerName(String playerName) {
         this.playerName = playerName;
     }
 
@@ -30,7 +30,7 @@ public class Player {
         this.role = role;
     }
 
-    public int getId() {
+    public int getPlayerId() {
         return this.playerId;
     }
 
@@ -38,7 +38,7 @@ public class Player {
         return this.jerseyNumber;
     }
 
-    public String getName() {
+    public String getPlayerName() {
         return this.playerName;
     }
 
