@@ -57,6 +57,7 @@ public class PlayerService implements PlayerRepository {
     public Player addPlayer(Player player) {
         player.setId(uniqueId);
         team.put(uniqueId, player);
+        uniqueId++;
         return player;
     }
 
